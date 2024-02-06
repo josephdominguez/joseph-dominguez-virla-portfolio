@@ -1,0 +1,161 @@
+/* Import fonts */
+@font-face {
+    font-family: 'Standard';
+    src: url('fonts/standard-book.woff2') format('woff2'),
+        url('fonts/standard-book.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Standard';
+    src: url('fonts/standard-bold.woff2') format('woff2'),
+        url('fonts/standard-bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* Main CSS Styles */
+:root {
+    /* Colors */
+    --oatmeal: rgb(255, 235, 210);
+    --toast: rgb(80, 40, 40);
+    --magenta: rgb(255, 71, 126);
+    --green: rgb(50, 125, 80);
+    --blue: rgb(15, 125, 255);
+
+    /* Font */
+    font-family: 'Standard';
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--oatmeal);
+    color: var(--toast);
+    scroll-behavior: smooth;
+}
+
+header,
+main {
+    max-width: 50vw;
+    margin: auto;
+    padding: 20px 0;
+}
+
+footer {
+    padding-top: 10%;
+    text-align: right;
+}
+
+a {
+    text-decoration: none;
+    color: var(--green);
+}
+
+a:visited {
+    color: var(--green);
+}
+
+
+strong {
+    transition: color 0.3s ease;
+}
+
+strong:hover {
+    color: #887b7b;
+}
+
+/* Navigation menu styles */
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-left: 10%;
+}
+
+nav a {
+    position: relative;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+nav a::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--magenta);
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* About Section styles */
+#about {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.about-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.name {
+    color: var(--blue);
+    font-weight: bold;
+    font-size: 72px;
+}
+
+.title {
+    text-align: right;
+    padding: 0 25%;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.about-content {
+    padding: 30px 75px;
+    font-size: 20px;
+}
+
+.about-image {
+    max-width: 25%;
+}
+
+/* Skills Section styles  */
+#skills h1 {
+    font-size: 36px;
+}
+
+#skills ul {
+    list-style: none;
+    padding-left: 5px;
+    font-size: 18px;
+}
+
+#skills li {
+    position: relative;
+    padding-left: 25px;
+}
+
+#skills li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    background-image: url('images/bulletpoint.png');
+    background-size: cover;
+}
+
