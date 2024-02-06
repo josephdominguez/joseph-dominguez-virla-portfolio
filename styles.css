@@ -44,6 +44,10 @@ main {
     padding: 20px 0;
 }
 
+section {
+    padding: 20px 0;
+}
+
 p {
     font-size: 18px;
     line-height: 1.5;
@@ -174,11 +178,11 @@ nav a:hover::after {
 #projects {
     max-width: 75vw;
     margin: auto;
-    padding-top: 20px; /* Adjust as needed */
 }
 
 #projects h1 {
-    max-width: 50vw;
+    max-width: 75vw;
+    text-align: right;
     margin: auto;
     padding-bottom: 25px;
     font-size: 48px;
@@ -187,6 +191,7 @@ nav a:hover::after {
 .project-container {
     display: flex;
     align-items: center;
+    margin-bottom: 40px;
 }
 
 .project-screenshot {
