@@ -189,19 +189,22 @@ nav a:hover::after {
 }
 
 .project-container {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
     align-items: center;
+    gap: 40px;
     margin-bottom: 40px;
 }
 
-.project-screenshot {
-    width: 55%;
-    margin-right: 40px;
-    border-radius: 5px;
+.project-links {
+    display: flex;
+    justify-content: space-between;
 }
 
-.project-description {
-    flex: 1;
+.project-screenshot {
+    max-width: 100%;
+    margin: auto;
+    border-radius: 5px;
 }
 
 .project-description a {
@@ -210,11 +213,6 @@ nav a:hover::after {
 
 .project-description a:hover {
     text-decoration: underline;
-}
-
-.project-links {
-    display: flex;
-    justify-content: space-between;
 }
 
 /* Tools Used styles */
@@ -226,7 +224,7 @@ nav a:hover::after {
 }
 
 .tool {
-    flex: 0 0 calc(20%);
+    flex: 0 0 calc(22%);
     width: 50px;
     height: 50px;
     background-color: var(--orange);
