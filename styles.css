@@ -104,6 +104,14 @@ nav a:hover::after {
     width: 100%;
 }
 
+@media screen and (max-width: 992px) {
+    nav {
+        max-width: 90vw;
+        flex-wrap: wrap;
+        padding-left: 0;
+    }
+}
+
 /* About Section styles */
 #about {
     display: flex;
@@ -141,6 +149,26 @@ nav a:hover::after {
     max-width: 25%;
 }
 
+@media screen and (max-width: 992px) {
+    #about {
+        flex-direction: column;
+        align-items: center;
+        max-width: 90vw;
+    }
+
+    .name {
+        font-size: 52px;
+    }
+
+    .about-content {
+        padding: 0;
+    }
+
+    .about-image, .about-image img {
+        max-width: 100%
+    }
+}
+
 /* Skills Section styles  */
 #skills {
     max-width: 50vw;
@@ -172,6 +200,16 @@ nav a:hover::after {
     height: 20px;
     background-image: url('images/bulletpoint.png');
     background-size: cover;
+}
+
+@media screen and (max-width: 992px) {
+    #skills {
+        max-width: 90vw;
+    }
+
+    #skills li {
+        font-size: 16px;
+    }
 }
 
 /* Project Section styles */
@@ -215,6 +253,17 @@ nav a:hover::after {
     text-decoration: underline;
 }
 
+@media screen and (max-width: 992px) {
+    #projects, #projects h1 {
+        max-width: 90vw;
+    }
+
+    .project-container {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
 /* Tools Used styles */
 .tool-box {
     display: flex;
@@ -232,8 +281,13 @@ nav a:hover::after {
     width: 100%;
     background-color: var(--orange);
     border-radius: 8px;
-
     font-weight: bold;
+}
+
+@media screen and (max-width: 992px) {
+    .tool {
+        font-size: 12px;
+    }
 }
 
 /* Resume Section styles */ 
